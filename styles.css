@@ -326,14 +326,14 @@ main {
   border-radius: 4px;
 }
 
-.quote::before {
+.quote-content::before {
   content: "« ";
   font-size: 24px;
   color: var(--deep-teal);
   margin-right: 5px;
 }
 
-.quote::after {
+.quote-content::after {
   content: " »";
   font-size: 24px;
   color: var(--deep-teal);
