@@ -8,6 +8,7 @@
   --cream: #FAFAFF;
   --deep-teal: #00687A;
   --yellow: #FFDE59;
+  --olive: #93A96F;
   --dark-text: #1a1a1a;
   --light-gray: #f5f5f5;
   --border-color: #e0e0e0;
@@ -44,7 +45,7 @@ body {
    ==================================== */
 
 header {
-  background: linear-gradient(to right, var(--deep-teal), var(--yellow));
+  background: linear-gradient(to right, var(--deep-teal), var(--olive));
   color: var(--cream);
   padding: 20px 0;
   position: sticky;
