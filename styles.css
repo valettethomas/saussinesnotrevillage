@@ -536,6 +536,20 @@ footer a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.footer-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--cream);
+  border-bottom: 1px dotted var(--yellow);
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--yellow);
+  border-bottom: 1px solid var(--yellow);
+}
+
 /* ====================================
    Responsive Design
    ==================================== */
