@@ -110,6 +110,35 @@ nav a.active {
   font-weight: 700;
 }
 
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cream);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
 /* ====================================
    Main Container & Layout
    ==================================== */
@@ -511,15 +540,33 @@ footer a:hover {
    ==================================== */
 
 @media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
   .header-container {
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
   }
 
   nav {
+    display: none;
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    width: 100%;
+    background-color: rgba(0, 104, 122, 0.95);
+    padding: 20px 0;
+    margin-top: 10px;
+    border-top: 2px solid var(--yellow);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    display: block;
   }
 
   .hero {

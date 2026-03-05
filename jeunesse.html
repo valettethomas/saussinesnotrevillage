@@ -10,7 +10,12 @@
     <header>
         <div class="header-container">
             <a href="index.html" class="logo"><img src="logo.png" alt="Saussines Notre Village" class="logo-img"></a>
-            <nav>
+            <button class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="navMenu">
                 <a href="index.html">Accueil</a>
                 <a href="methode.html">Notre Méthode</a>
                 <a href="communication.html">Communication</a>
@@ -167,5 +172,25 @@
             <p>Votez le 15 mars 2026 pour l'avenir de Saussines</p>
         </div>
     </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
