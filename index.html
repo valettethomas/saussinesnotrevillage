@@ -310,6 +310,39 @@
         </div>
     </footer>
 
+    <button class="floating-button" id="procurationButton">📧 J'ai besoin d'une procuration</button>
+
+    <!-- Popup Procuration Modal -->
+    <div id="procurationModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Demande de Procuration</h2>
+            
+            <p class="modal-intro">Vous n'êtes pas disponible le jour de l'élection ? L'un de nos volontaires peut porter votre voix.</p>
+            
+            <p>Pour cela, envoyez-nous un mail à <a href="mailto:saussinesnotrevillage@gmail.com" class="email-link">saussinesnotrevillage@gmail.com</a> avec les indications suivantes :</p>
+            
+            <div class="modal-section">
+                <h3>Vos informations</h3>
+                <ul>
+                    <li>Vos prénoms tels qu'indiqués sur votre pièce d'identité</li>
+                    <li>Votre nom de naissance</li>
+                    <li>Votre numéro de téléphone</li>
+                </ul>
+            </div>
+            
+            <div class="modal-section">
+                <h3>Votre demande</h3>
+                <ul>
+                    <li>Votre numéro d'électeur (Le numéro national d'électeur contient jusqu'à 9 chiffres et est présent sur la carte électorale. Il peut également être retrouvé sur le service Interroger sa situation électorale)</li>
+                    <li>Votre date de naissance</li>
+                    <li>Votre sexe</li>
+                    <li>Votre adresse postale électorale</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Burger menu toggle
         const burgerMenu = document.getElementById('burgerMenu');
@@ -327,6 +360,25 @@
                 burgerMenu.classList.remove('active');
                 navMenu.classList.remove('active');
             });
+        });
+
+        // Procuration modal
+        const procurationButton = document.getElementById('procurationButton');
+        const procurationModal = document.getElementById('procurationModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        procurationButton.addEventListener('click', () => {
+            procurationModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            procurationModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === procurationModal) {
+                procurationModal.style.display = 'none';
+            }
         });
     </script>
 </body>
