@@ -314,6 +314,7 @@ main {
 
 .highlight-box strong {
   color: var(--deep-teal);
+  font-size: 48px;
 }
 
 .quote {
