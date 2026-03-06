@@ -91,7 +91,7 @@ header {
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -152,7 +152,7 @@ nav a.facebook-button:hover {
 }
 
 nav a.facebook-button i {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .burger-menu {
