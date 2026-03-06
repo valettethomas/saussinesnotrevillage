@@ -47,7 +47,7 @@ body {
 header {
   background: linear-gradient(to right, var(--deep-teal), var(--olive));
   color: var(--cream);
-  padding: 20px 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -91,7 +91,7 @@ header {
 
 nav {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
 }
 
