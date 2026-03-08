@@ -688,7 +688,7 @@ footer a:hover {
   bottom: 30px;
   right: 30px;
   padding: 15px 25px;
-  background: linear-gradient(to right, var(--deep-teal), var(--yellow));
+  background: linear-gradient(to right, var(--deep-teal), var(--olive));
   color: var(--cream);
   text-decoration: none;
   border-radius: 50px;
