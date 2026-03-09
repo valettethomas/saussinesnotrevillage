@@ -55,7 +55,7 @@ header {
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -101,9 +101,25 @@ nav a {
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 500;
+  position: relative;
+  padding: 0 12px;
+  text-align: center;
+}
+
+nav a:not(:last-child)::after {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cream);
 }
 
 nav a:hover {
+  color: var(--yellow);
+}
+
+nav a:hover::after {
   color: var(--yellow);
 }
 
