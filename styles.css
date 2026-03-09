@@ -144,6 +144,11 @@ nav a.facebook-link:hover {
   transform: scale(1.1);
 }
 
+/* Masquer le lien Maison de Santé */
+nav a[href="sante.html"] {
+  display: none;
+}
+
 nav a.facebook-button {
   background-color: white;
   color: #1877F2;
